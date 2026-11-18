@@ -2,7 +2,7 @@ name: Filter Proxies
 
 on:
   schedule:
-    # UTC 20:00 / 03:00 / 10:00 -> Beijing 04:00 / 11:00 / 18:00
+    # UTC 20:00 / 03:00 / 10:00 = Beijing 04:00 / 11:00 / 18:00
     - cron: '0 20,3,10 * * *'
   workflow_dispatch:
 
@@ -12,7 +12,7 @@ permissions:
 jobs:
   filter:
     runs-on: ubuntu-latest
-    timeout-minutes: 50
+    timeout-minutes: 55
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -35,7 +35,8 @@ jobs:
             --data-urlencode "url=${SOURCES}" \
             -o merged.yaml
           echo "merged bytes: $(wc -c < merged.yaml)"
-          grep -cE '^  - name:' merged.yaml || true
+          echo "proxy count: $(sed -n '/^proxies:/,/^proxy-groups:/p' merged.yaml | grep -c 'name:' || true)"
+          grep -m 3 '^  - name:' merged.yaml || true
 
       - name: Setup Go
         uses: actions/setup-go@v5
@@ -52,12 +53,13 @@ jobs:
             -c merged.yaml \
             -output clash.yaml \
             -max-latency 400ms \
-            -min-speed 0.5 \
-            -download-size 2 \
+            -min-download-speed 0.5 \
+            -download-size 2097152 \
             -concurrent 8 \
             -timeout 8s || true
           if [ -s clash.yaml ]; then
             echo "filtered bytes: $(wc -c < clash.yaml)"
+            echo "kept nodes: $(sed -n '/^proxies:/,/^proxy-groups:/p' clash.yaml | grep -c 'name:' || true)"
           else
             echo "no node passed the filter, keep previous clash.yaml"
           fi
