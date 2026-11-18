@@ -17,6 +17,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Install pyyaml
+        run: pip install pyyaml
+
       - name: Start subconverter
         run: |
           docker run -d --name subconverter -p 25500:25500 tindy2013/subconverter:latest
@@ -25,18 +28,29 @@ jobs:
             sleep 2
           done
 
-      - name: Merge subscriptions to Clash YAML
+      - name: Convert each source separately
         run: |
-          SOURCES="https://raw.githubusercontent.com/kooker/FreeSubsCheck/main/base64.txt|https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub|https://raw.githubusercontent.com/zhuhaiuk/free-nodes/main/clash_config.yaml|https://gist.githubusercontent.com/lihua657u/7d347996db4ebfbc52d034cd225010c3/raw/clash.yaml|https://103.14.76.98/sub/fsc/689fff64262b5ae867b12698c7086b0e|https://ghfast.top/https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/v.txt"
-          curl -sf -G http://127.0.0.1:25500/sub \
-            --data-urlencode "target=clash" \
-            --data-urlencode "emoji=true" \
-            --data-urlencode "udp=true" \
-            --data-urlencode "url=${SOURCES}" \
-            -o merged.yaml
-          echo "merged bytes: $(wc -c < merged.yaml)"
-          echo "proxy count: $(sed -n '/^proxies:/,/^proxy-groups:/p' merged.yaml | grep -c 'name:' || true)"
-          grep -m 3 '^  - name:' merged.yaml || true
+          i=0
+          for u in \
+            "https://raw.githubusercontent.com/kooker/FreeSubsCheck/main/base64.txt" \
+            "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub" \
+            "https://raw.githubusercontent.com/zhuhaiuk/free-nodes/main/clash_config.yaml" \
+            "https://gist.githubusercontent.com/lihua657u/7d347996db4ebfbc52d034cd225010c3/raw/clash.yaml" \
+            "https://103.14.76.98/sub/fsc/689fff64262b5ae867b12698c7086b0e" \
+            "https://ghfast.top/https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/v.txt"; do
+            i=$((i+1))
+            if curl -sf -G http://127.0.0.1:25500/sub \
+                 --data-urlencode "target=clash" \
+                 --data-urlencode "url=$u" \
+                 -o "src_$i.yaml"; then
+              echo "src_$i: $(sed -n '/^proxies:/,/^proxy-groups:/p' src_$i.yaml | grep -c 'name:')"
+            else
+              echo "src_$i: FETCH_OR_CONVERT_FAILED $u"
+            fi
+          done
+
+      - name: Merge all sources
+        run: python3 merge.py src_*.yaml merged.yaml
 
       - name: Setup Go
         uses: actions/setup-go@v5
@@ -50,18 +64,13 @@ jobs:
         run: |
           rm -f clash.yaml
           "$(go env GOPATH)/bin/clash-speedtest" \
-            -c merged.yaml \
-            -output clash.yaml \
-            -max-latency 400ms \
-            -min-download-speed 0.5 \
-            -download-size 2097152 \
-            -concurrent 8 \
-            -timeout 8s || true
+            -c merged.yaml -output clash.yaml \
+            -max-latency 400ms -min-download-speed 0.5 \
+            -download-size 2097152 -concurrent 8 -timeout 8s || true
           if [ -s clash.yaml ]; then
-            echo "filtered bytes: $(wc -c < clash.yaml)"
-            echo "kept nodes: $(sed -n '/^proxies:/,/^proxy-groups:/p' clash.yaml | grep -c 'name:' || true)"
+            echo "kept: $(sed -n '/^proxies:/,/^proxy-groups:/p' clash.yaml | grep -c 'name:')"
           else
-            echo "no node passed the filter, keep previous clash.yaml"
+            echo "NO_RESULT keep previous clash.yaml"
           fi
 
       - name: Commit result
