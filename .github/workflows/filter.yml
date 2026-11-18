@@ -81,12 +81,20 @@ jobs:
           "$(go env GOPATH)/bin/clash-speedtest" \
             -c merged.yaml -output clash.yaml \
             -max-latency 400ms -min-download-speed 2 \
-            -download-size 1048576 -concurrent 16 -timeout 8s || true
+            -download-size 1048576 -concurrent 16 -timeout 8s 2>&1 | tee speedtest.log || true
           if [ -s clash.yaml ]; then
             echo "kept: $(sed -n '/^proxies:/,/^proxy-groups:/p' clash.yaml | grep -c 'name:')"
           else
             echo "NO_RESULT keep previous clash.yaml"
           fi
+
+      - name: Upload speedtest log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: speedtest-log
+          path: speedtest.log
+          retention-days: 3
 
       - name: Wrap into a valid Clash config
         run: |
