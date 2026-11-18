@@ -81,8 +81,8 @@ jobs:
           "$(go env GOPATH)/bin/clash-speedtest" \
             -c merged.yaml -output clash.yaml \
             -max-latency 400ms -min-download-speed 2 \
-            -download-size 1048576 -concurrent 16 -timeout 8s \
-            -server-url "https://speed.cloudflare.com/__down?bytes=10000000" || true
+            -download-size 1048576 -concurrent 12 -timeout 8s \
+            -server-url "https://proof.ovh.net/files/10Mb.dat" || true
           if [ -s clash.yaml ]; then
             echo "kept: $(sed -n '/^proxies:/,/^proxy-groups:/p' clash.yaml | grep -c 'name:')"
           else
