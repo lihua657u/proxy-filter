@@ -36,8 +36,7 @@ jobs:
             "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub" \
             "https://raw.githubusercontent.com/zhuhaiuk/free-nodes/main/clash_config.yaml" \
             "https://gist.githubusercontent.com/lihua657u/7d347996db4ebfbc52d034cd225010c3/raw/clash.yaml" \
-            "https://103.14.76.98/sub/fsc/689fff64262b5ae867b12698c7086b0e" \
-            "https://ghfast.top/https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/v.txt"; do
+            "https://103.14.76.98/sub/fsc/689fff64262b5ae867b12698c7086b0e"; do
             i=$((i+1))
             if curl -sf -G http://127.0.0.1:25500/sub \
                  --data-urlencode "target=clash" \
@@ -46,6 +45,21 @@ jobs:
               echo "src_$i: $(sed -n '/^proxies:/,/^proxy-groups:/p' src_$i.yaml | grep -c 'name:')"
             else
               echo "src_$i: FETCH_OR_CONVERT_FAILED $u"
+            fi
+          done
+
+      - name: Fetch source 6 as Clash YAML (no conversion, keeps all nodes)
+        run: |
+          for u in \
+            "https://ghfast.top/https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml" \
+            "https://cdn.jsdelivr.net/gh/free18/v2ray@main/c.yaml" \
+            "https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml"; do
+            if curl -sf -m 60 "$u" -o src_6.yaml && grep -q "^proxies:" src_6.yaml; then
+              echo "src_6 OK from $u"
+              echo "src_6 nodes: $(sed -n '/^proxies:/,/^proxy-groups:/p' src_6.yaml | grep -c '^  - ')"
+              break
+            else
+              echo "src_6 mirror failed: $u"
             fi
           done
 
