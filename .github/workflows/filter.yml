@@ -1,0 +1,73 @@
+name: Filter Proxies
+
+on:
+  schedule:
+    # UTC 20:00 / 03:00 / 10:00 -> Beijing 04:00 / 11:00 / 18:00
+    - cron: '0 20,3,10 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  filter:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Start subconverter
+        run: |
+          docker run -d --name subconverter -p 25500:25500 tindy2013/subconverter:latest
+          for i in $(seq 1 30); do
+            curl -sf http://127.0.0.1:25500/version >/dev/null 2>&1 && break
+            sleep 2
+          done
+
+      - name: Merge subscriptions to Clash YAML
+        run: |
+          SOURCES="https://raw.githubusercontent.com/kooker/FreeSubsCheck/main/base64.txt|https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub|https://raw.githubusercontent.com/zhuhaiuk/free-nodes/main/clash_config.yaml|https://gist.githubusercontent.com/lihua657u/7d347996db4ebfbc52d034cd225010c3/raw/clash.yaml|https://103.14.76.98/sub/fsc/689fff64262b5ae867b12698c7086b0e|https://ghfast.top/https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/v.txt"
+          curl -sf -G http://127.0.0.1:25500/sub \
+            --data-urlencode "target=clash" \
+            --data-urlencode "emoji=true" \
+            --data-urlencode "udp=true" \
+            --data-urlencode "url=${SOURCES}" \
+            -o merged.yaml
+          echo "merged bytes: $(wc -c < merged.yaml)"
+          grep -cE '^  - name:' merged.yaml || true
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.22'
+
+      - name: Install clash-speedtest
+        run: go install github.com/faceair/clash-speedtest@latest
+
+      - name: Filter nodes
+        run: |
+          rm -f clash.yaml
+          "$(go env GOPATH)/bin/clash-speedtest" \
+            -c merged.yaml \
+            -output clash.yaml \
+            -max-latency 400ms \
+            -min-speed 0.5 \
+            -download-size 2 \
+            -concurrent 8 \
+            -timeout 8s || true
+          if [ -s clash.yaml ]; then
+            echo "filtered bytes: $(wc -c < clash.yaml)"
+          else
+            echo "no node passed the filter, keep previous clash.yaml"
+          fi
+
+      - name: Commit result
+        run: |
+          if [ -s clash.yaml ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -f clash.yaml
+            git diff --cached --quiet || git commit -m "chore: refresh filtered proxies"
+            git push
+          fi
