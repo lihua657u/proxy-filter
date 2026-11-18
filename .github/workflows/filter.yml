@@ -55,13 +55,10 @@ jobs:
       - name: Setup Go
         uses: actions/setup-go@v5
         with:
-          go-version: '1.22'
+          go-version: 'stable'
+          cache: false
 
       - name: Install clash-speedtest
-        env:
-          GOSUMDB: "off"
-          GOFLAGS: "-mod=mod"
-          GOPROXY: "https://proxy.golang.org,direct"
         run: go install github.com/faceair/clash-speedtest@latest
 
       - name: Filter nodes
