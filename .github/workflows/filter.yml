@@ -88,6 +88,14 @@ jobs:
             echo "NO_RESULT keep previous clash.yaml"
           fi
 
+      - name: Wrap into a valid Clash config
+        run: |
+          if [ -s clash.yaml ]; then
+            mv clash.yaml speedtest_out.yaml
+            python3 merge.py speedtest_out.yaml clash.yaml
+            echo "groups: $(grep -c 'type: select' clash.yaml) select / $(grep -c 'type: url-test' clash.yaml) url-test"
+          fi
+
       - name: Commit result
         run: |
           if [ -s clash.yaml ]; then
