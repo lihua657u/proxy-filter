@@ -3,971 +3,135 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- cipher: aes-128-gcm
-  name: 🇺🇸 US 001 | ⬇️ 8.55MB/s
-  password: shadowsocks
-  port: 443
-  server: 156.146.38.168
+- name: 🇺🇸 US 001 | ⬇️ 7.21MB/s
+  port: 9443
+  server: 193.239.236.147
   skip-cert-verify: true
-  tls: false
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 🇺🇸 US 002 | ⬇️ 6.14MB/s
-  password: shadowsocks
-  port: 443
-  server: 156.146.38.170
-  skip-cert-verify: true
-  tls: false
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 🇺🇸 US 003 | ⬇️ 5.30MB/s
-  password: shadowsocks
-  port: 443
-  server: 37.19.198.244
-  skip-cert-verify: true
-  tls: false
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 🇺🇸 US 004 | ⬇️ 5.09MB/s
-  password: shadowsocks
-  port: 443
-  server: 37.19.198.236
-  skip-cert-verify: true
-  tls: false
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 🇺🇸 US 005 | ⬇️ 4.72MB/s
-  password: shadowsocks
-  port: 443
-  server: 37.19.198.243
-  skip-cert-verify: true
-  tls: false
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 🇺🇸 US 006 | ⬇️ 4.65MB/s
-  password: shadowsocks
-  port: 443
-  server: 156.146.38.169
-  skip-cert-verify: true
-  tls: false
-  type: ss
-  udp: true
-- name: 🇺🇸 US 007 | ⬇️ 4.62MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 216.152.155.158
-  servername: resources.nextjobopportunityandclaimyouridealrole.com
-  skip-cert-verify: true
-  sni: resources.nextjobopportunityandclaimyouridealrole.com
   tls: true
-  type: trojan
-  udp: true
-- name: 🇺🇸 US 008 | ⬇️ 4.60MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  type: http
+- name: 🇺🇸 US 002 | ⬇️ 5.76MB/s
+  password: 'null'
   port: 443
-  server: 216.152.155.54
-  servername: learn.nextjobopportunityandclaimyouridealrole.com
+  server: 23.133.176.14
   skip-cert-verify: true
-  sni: learn.nextjobopportunityandclaimyouridealrole.com
   tls: true
-  type: trojan
-  udp: true
-- name: 🇺🇸 US 009 | ⬇️ 4.54MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 216.152.155.59
-  servername: api.nextjobopportunityandclaimyouridealrole.com
+  type: http
+  username: 'null'
+- name: 🇺🇸 US 003 | ⬇️ 3.20MB/s
+  port: 9002
+  server: 138.199.35.195
   skip-cert-verify: true
-  sni: api.nextjobopportunityandclaimyouridealrole.com
   tls: true
-  type: trojan
-  udp: true
-- name: 🇺🇸 US 010 | ⬇️ 4.46MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 216.152.155.23
-  servername: courses.nextjobopportunityandclaimyouridealrole.com
+  type: http
+- name: 🇺🇸 US 004 | ⬇️ 3.15MB/s
+  port: 9002
+  server: 138.199.35.198
   skip-cert-verify: true
-  sni: courses.nextjobopportunityandclaimyouridealrole.com
   tls: true
-  type: trojan
-  udp: true
-- cipher: aes-128-gcm
-  name: 🇺🇸 US 011 | ⬇️ 4.44MB/s
-  password: shadowsocks
-  port: 443
-  server: 37.19.198.160
+  type: http
+- name: 🇺🇸 US 005 | ⬇️ 3.02MB/s
+  port: 9002
+  server: 138.199.35.200
   skip-cert-verify: true
-  tls: false
-  type: ss
-  udp: true
-- name: 🇺🇸 US 012 | ⬇️ 4.43MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 216.152.155.176
-  servername: blog.nextjobopportunityandclaimyouridealrole.com
-  skip-cert-verify: true
-  sni: blog.nextjobopportunityandclaimyouridealrole.com
   tls: true
-  type: trojan
-  udp: true
-- name: 🇺🇸 US 013 | ⬇️ 4.27MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 216.152.155.50
-  servername: cdn.nextjobopportunityandclaimyouridealrole.com
+  type: http
+- name: 🇺🇸 US 006 | ⬇️ 3.01MB/s
+  port: 9002
+  server: 138.199.35.212
   skip-cert-verify: true
-  sni: cdn.nextjobopportunityandclaimyouridealrole.com
   tls: true
-  type: trojan
-  udp: true
-- name: 🇨🇦 CA 001 | ⬇️ 3.90MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  type: http
+- name: 🇺🇸 US 007 | ⬇️ 1.44MB/s
+  network: ws
   port: 443
-  server: 216.152.147.48
-  servername: courses.connectingpeoplewithgreatjobs.com
+  server: xray-b8ct4r2f-sahdon-hosaindoost.cloady.io
+  servername: xray-b8ct4r2f-sahdon-hosaindoost.cloady.io
   skip-cert-verify: true
-  sni: courses.connectingpeoplewithgreatjobs.com
-  tls: true
-  type: trojan
-  udp: true
-- name: 🇺🇸 US 014 | ⬇️ 3.87MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 66.163.122.46
-  servername: searchnationwidecareerchangehelperandguidancetoday.com
-  skip-cert-verify: true
-  sni: searchnationwidecareerchangehelperandguidancetoday.com
-  tls: true
-  type: trojan
-  udp: true
-- name: 🇨🇦 CA 002 | ⬇️ 3.87MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 216.152.147.93
-  servername: connectingpeoplewithgreatjobs.com
-  skip-cert-verify: true
-  sni: connectingpeoplewithgreatjobs.com
-  tls: true
-  type: trojan
-  udp: true
-- name: 🇨🇦 CA 003 | ⬇️ 3.80MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 216.152.147.79
-  servername: blog.connectingpeoplewithgreatjobs.com
-  skip-cert-verify: true
-  sni: blog.connectingpeoplewithgreatjobs.com
-  tls: true
-  type: trojan
-  udp: true
-- name: 🇺🇸 US 015 | ⬇️ 3.72MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 66.163.122.7
-  servername: www.searchnationwidecareerchangehelperandguidancetoday.com
-  skip-cert-verify: true
-  sni: www.searchnationwidecareerchangehelperandguidancetoday.com
-  tls: true
-  type: trojan
-  udp: true
-- name: 🇺🇸 US 016 | ⬇️ 3.71MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 66.163.122.26
-  servername: blog.searchnationwidecareerchangehelperandguidancetoday.com
-  skip-cert-verify: true
-  sni: blog.searchnationwidecareerchangehelperandguidancetoday.com
-  tls: true
-  type: trojan
-  udp: true
-- name: 🇨🇦 CA 004 | ⬇️ 3.71MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 216.152.147.89
-  servername: www.connectingpeoplewithgreatjobs.com
-  skip-cert-verify: true
-  sni: www.connectingpeoplewithgreatjobs.com
-  tls: true
-  type: trojan
-  udp: true
-- name: 🇨🇦 CA 005 | ⬇️ 3.69MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 216.152.147.85
-  servername: cdn.connectingpeoplewithgreatjobs.com
-  skip-cert-verify: true
-  sni: cdn.connectingpeoplewithgreatjobs.com
-  tls: true
-  type: trojan
-  udp: true
-- name: 🇨🇦 CA 006 | ⬇️ 3.67MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 216.152.147.74
-  servername: api.connectingpeoplewithgreatjobs.com
-  skip-cert-verify: true
-  sni: api.connectingpeoplewithgreatjobs.com
-  tls: true
-  type: trojan
-  udp: true
-- cipher: aes-256-gcm
-  name: 🇺🇸 US 017 | ⬇️ 3.63MB/s
-  password: pKEW8JPByTVTLtM
-  port: 443
-  server: 15.204.247.244
-  skip-cert-verify: true
-  tls: false
-  type: ss
-  udp: true
-- name: 🇨🇦 CA 007 | ⬇️ 3.62MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: leviko-ca6908.shopingggg.ir
-  servername: blog.connectingpeoplewithgreatjobs.com
-  skip-cert-verify: true
-  sni: blog.connectingpeoplewithgreatjobs.com
-  tls: true
-  type: trojan
-  udp: true
-- name: 🇨🇦 CA 008 | ⬇️ 3.55MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 216.152.147.201
-  servername: resources.connectingpeoplewithgreatjobs.com
-  skip-cert-verify: true
-  sni: resources.connectingpeoplewithgreatjobs.com
-  tls: true
-  type: trojan
-  udp: true
-- name: 🇺🇸 US 018 | ⬇️ 3.36MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 216.152.156.81
-  servername: www.healthcarejobshubenhancemedicalprofessionalskillstoday.com
-  skip-cert-verify: true
-  sni: www.healthcarejobshubenhancemedicalprofessionalskillstoday.com
-  tls: true
-  type: trojan
-  udp: true
-- name: 🇺🇸 US 019 | ⬇️ 3.32MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 216.152.156.159
-  servername: resources.healthcarejobshubenhancemedicalprofessionalskillstoday.com
-  skip-cert-verify: true
-  sni: resources.healthcarejobshubenhancemedicalprofessionalskillstoday.com
-  tls: true
-  type: trojan
-  udp: true
-- name: 🇺🇸 US 020 | ⬇️ 3.30MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 216.152.156.212
-  servername: courses.healthcarejobshubenhancemedicalprofessionalskillstoday.com
-  skip-cert-verify: true
-  sni: courses.healthcarejobshubenhancemedicalprofessionalskillstoday.com
-  tls: true
-  type: trojan
-  udp: true
-- name: 🇺🇸 US 021 | ⬇️ 3.30MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 216.152.155.131
-  servername: www.nextjobopportunityandclaimyouridealrole.com
-  skip-cert-verify: true
-  sni: www.nextjobopportunityandclaimyouridealrole.com
-  tls: true
-  type: trojan
-  udp: true
-- name: 🇺🇸 US 022 | ⬇️ 3.27MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 216.152.156.65
-  servername: learn.healthcarejobshubenhancemedicalprofessionalskillstoday.com
-  skip-cert-verify: true
-  sni: learn.healthcarejobshubenhancemedicalprofessionalskillstoday.com
-  tls: true
-  type: trojan
-  udp: true
-- name: 🇺🇸 US 023 | ⬇️ 3.27MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 170.101.101.19
-  servername: learn.explorecreativejobsandenhanceyourcareerportfolio.com
-  skip-cert-verify: true
-  sni: learn.explorecreativejobsandenhanceyourcareerportfolio.com
-  tls: true
-  type: trojan
-  udp: true
-- name: 🇨🇦 CA 009 | ⬇️ 3.26MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 216.152.147.152
-  servername: learn.connectingpeoplewithgreatjobs.com
-  skip-cert-verify: true
-  sni: learn.connectingpeoplewithgreatjobs.com
-  tls: true
-  type: trojan
-  udp: true
-- name: 🇺🇸 US 024 | ⬇️ 3.23MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 170.101.101.112
-  servername: resources.explorecreativejobsandenhanceyourcareerportfolio.com
-  skip-cert-verify: true
-  sni: resources.explorecreativejobsandenhanceyourcareerportfolio.com
-  tls: true
-  type: trojan
-  udp: true
-- name: 🇺🇸 US 025 | ⬇️ 3.21MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 216.152.156.49
-  servername: cdn.healthcarejobshubenhancemedicalprofessionalskillstoday.com
-  skip-cert-verify: true
-  sni: cdn.healthcarejobshubenhancemedicalprofessionalskillstoday.com
-  tls: true
-  type: trojan
-  udp: true
-- name: 🇺🇸 US 026 | ⬇️ 3.20MB/s
-  port: 443
-  server: kuruish.org
-  servername: kuruish.org
-  skip-cert-verify: true
-  sni: kuruish.org
+  sni: xray-b8ct4r2f-sahdon-hosaindoost.cloady.io
   tls: true
   type: vless
   udp: true
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-- name: 🇺🇸 US 027 | ⬇️ 3.17MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 66.163.122.113
-  servername: api.searchnationwidecareerchangehelperandguidancetoday.com
-  skip-cert-verify: true
-  sni: api.searchnationwidecareerchangehelperandguidancetoday.com
-  tls: true
-  type: trojan
-  udp: true
-- cipher: aes-128-gcm
-  name: 🇨🇦 CA 010 | ⬇️ 3.03MB/s
-  password: shadowsocks
-  port: 443
-  server: 149.22.95.183
-  skip-cert-verify: true
-  tls: false
-  type: ss
-  udp: true
-- name: 🇺🇸 US 028 | ⬇️ 2.99MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 66.163.122.25
-  servername: cdn.searchnationwidecareerchangehelperandguidancetoday.com
-  skip-cert-verify: true
-  sni: cdn.searchnationwidecareerchangehelperandguidancetoday.com
-  tls: true
-  type: trojan
-  udp: true
-- cipher: aes-128-gcm
-  name: 🇺🇸 US 029 | ⬇️ 2.92MB/s
-  password: shadowsocks
-  port: 443
-  server: 173.244.56.9
-  skip-cert-verify: true
-  tls: false
-  type: ss
-  udp: true
-- name: 🇺🇸 US 030 | ⬇️ 2.89MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 66.163.122.30
-  servername: resources.searchnationwidecareerchangehelperandguidancetoday.com
-  skip-cert-verify: true
-  sni: resources.searchnationwidecareerchangehelperandguidancetoday.com
-  tls: true
-  type: trojan
-  udp: true
-- name: 🇺🇸 US 031 | ⬇️ 2.85MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 170.101.101.237
-  servername: cdn.explorecreativejobsandenhanceyourcareerportfolio.com
-  skip-cert-verify: true
-  sni: cdn.explorecreativejobsandenhanceyourcareerportfolio.com
-  tls: true
-  type: trojan
-  udp: true
-- name: 🇺🇸 US 032 | ⬇️ 2.44MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 167.88.61.198
-  servername: cdn.browseseniorrolesandenhanceyourcareertoday.com
-  skip-cert-verify: true
-  sni: cdn.browseseniorrolesandenhanceyourcareertoday.com
-  tls: true
-  type: trojan
-  udp: true
-- name: 🇺🇸 US 033 | ⬇️ 2.44MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 167.88.61.175
-  servername: blog.browseseniorrolesandenhanceyourcareertoday.com
-  skip-cert-verify: true
-  sni: blog.browseseniorrolesandenhanceyourcareertoday.com
-  tls: true
-  type: trojan
-  udp: true
-- name: 🇺🇸 US 034 | ⬇️ 2.34MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 167.88.61.193
-  servername: browseseniorrolesandenhanceyourcareertoday.com
-  skip-cert-verify: true
-  sni: browseseniorrolesandenhanceyourcareertoday.com
-  tls: true
-  type: trojan
-  udp: true
-- name: 🇺🇸 US 035 | ⬇️ 2.34MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 167.88.61.52
-  servername: courses.browseseniorrolesandenhanceyourcareertoday.com
-  skip-cert-verify: true
-  sni: courses.browseseniorrolesandenhanceyourcareertoday.com
-  tls: true
-  type: trojan
-  udp: true
-- name: 🇺🇸 US 036 | ⬇️ 2.33MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 170.101.101.53
-  servername: www.explorecreativejobsandenhanceyourcareerportfolio.com
-  skip-cert-verify: true
-  sni: www.explorecreativejobsandenhanceyourcareerportfolio.com
-  tls: true
-  type: trojan
-  udp: true
-- name: 🇺🇸 US 037 | ⬇️ 2.31MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 170.101.101.211
-  servername: api.explorecreativejobsandenhanceyourcareerportfolio.com
-  skip-cert-verify: true
-  sni: api.explorecreativejobsandenhanceyourcareerportfolio.com
-  tls: true
-  type: trojan
-  udp: true
-- name: 🇺🇸 US 038 | ⬇️ 2.31MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 167.88.61.20
-  servername: api.browseseniorrolesandenhanceyourcareertoday.com
-  skip-cert-verify: true
-  sni: api.browseseniorrolesandenhanceyourcareertoday.com
-  tls: true
-  type: trojan
-  udp: true
-- name: 🇺🇸 US 039 | ⬇️ 2.28MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 170.101.101.67
-  servername: courses.explorecreativejobsandenhanceyourcareerportfolio.com
-  skip-cert-verify: true
-  sni: courses.explorecreativejobsandenhanceyourcareerportfolio.com
-  tls: true
-  type: trojan
-  udp: true
-- cipher: aes-128-gcm
-  name: 🇺🇸 US 040 | ⬇️ 2.26MB/s
-  password: shadowsocks
-  port: 443
-  server: 173.244.56.6
-  skip-cert-verify: true
-  tls: false
-  type: ss
-  udp: true
-- name: 🇨🇦 CA 011 | ⬇️ 2.14MB/s
-  port: 443
-  server: 66.163.113.9
-  servername: kuruish.org
-  skip-cert-verify: true
-  sni: kuruish.org
-  tls: true
-  type: vless
-  udp: true
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-- cipher: chacha20-ietf-poly1305
-  name: 🇺🇸 US 041 | ⬇️ 2.10MB/s
-  password: eDfN7SODQceIOmIAbtJJtK
-  port: 443
-  server: 198.98.53.130
-  skip-cert-verify: true
-  tls: false
-  type: ss
-  udp: true
-- name: 🇺🇸 US 042 | ⬇️ 2.04MB/s
-  port: 443
-  server: 216.106.185.158
-  servername: kuruish.org
-  skip-cert-verify: true
-  sni: kuruish.org
-  tls: true
-  type: vless
-  udp: true
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-- cipher: aes-128-gcm
-  name: 🇬🇧 GB 001 | ⬇️ 1.86MB/s
-  password: shadowsocks
-  port: 443
-  server: 158.173.24.73
-  skip-cert-verify: true
-  tls: false
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 🇬🇧 GB 002 | ⬇️ 1.72MB/s
-  password: shadowsocks
-  port: 443
-  server: 141.98.101.178
-  skip-cert-verify: true
-  tls: false
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 🇬🇧 GB 003 | ⬇️ 1.71MB/s
-  password: shadowsocks
-  port: 443
-  server: 141.98.101.182
-  skip-cert-verify: true
-  tls: false
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 🇳🇱 NL 001 | ⬇️ 1.57MB/s
-  password: shadowsocks
-  port: 443
-  server: 158.173.20.171
-  skip-cert-verify: true
-  tls: false
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL 002 | ⬇️ 1.57MB/s
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 443
-  server: 82.38.31.162
-  skip-cert-verify: true
-  tls: false
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 🇳🇱 NL 003 | ⬇️ 1.57MB/s
-  password: shadowsocks
-  port: 443
-  server: leviko-nl6763.shopingggg.ir
-  skip-cert-verify: true
-  tls: false
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL 004 | ⬇️ 1.57MB/s
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 443
-  server: 82.38.31.165
-  skip-cert-verify: true
-  tls: false
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱 NL 005 | ⬇️ 1.56MB/s
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 443
-  server: 193.29.139.235
-  skip-cert-verify: true
-  tls: false
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: 🇳🇱 NL 006 | ⬇️ 1.56MB/s
-  password: shadowsocks
-  port: 443
-  server: 158.173.20.208
-  skip-cert-verify: true
-  tls: false
-  type: ss
-  udp: true
-- cipher: 2022-blake3-chacha20-poly1305
-  name: 🇩🇪 DE 001 | ⬇️ 1.49MB/s
-  password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
-  port: 443
-  server: 47.254.128.109
-  skip-cert-verify: true
-  tls: false
-  type: ss
-  udp: true
-- name: 🇦🇪 AE 001 | ⬇️ 1.43MB/s
+  uuid: 1fd2e2d1-96f5-2056-19fd-b375b1a9d851
+  ws-opts:
+    headers:
+      Host: xray-b8ct4r2f-sahdon-hosaindoost.cloady.io
+    path: /ffad70ffdfc3bcda
+- name: 🇦🇪 AE 001 | ⬇️ 1.38MB/s
   password: 900c8c92-1979-4c7c-8f2f-63e87d53d8fe
   port: 13337
+  ports: 13337
   server: 128.254.186.190
   skip-cert-verify: true
   sni: mother-earth.fyi
   type: hysteria2
+- name: 🇦🇪 AE 002 | ⬇️ 1.32MB/s
+  password: 900c8c92-1979-4c7c-8f2f-63e87d53d8fe
+  port: 13337
+  ports: 13337
+  server: 128.254.186.57
+  skip-cert-verify: true
+  sni: mother-earth.fyi
+  type: hysteria2
 - cipher: aes-256-gcm
-  name: 🇮🇹 IT 001 | ⬇️ 1.36MB/s
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 202.50.253.36
+  name: 🇯🇵 JP 001 | ⬇️ 1.30MB/s
+  password: '123456'
+  port: 5555
+  server: 47.91.16.50
   skip-cert-verify: true
   tls: false
   type: ss
   udp: true
-- name: 🇳🇱 NL 007 | ⬇️ 1.36MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 66.163.127.215
-  servername: courses.indyourperfectremotetechjobfromthecomfortofhome.com
-  skip-cert-verify: true
-  sni: courses.indyourperfectremotetechjobfromthecomfortofhome.com
-  tls: true
-  type: trojan
-  udp: true
-- name: 🇳🇱 NL 008 | ⬇️ 1.33MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 66.163.127.107
-  servername: blog.indyourperfectremotetechjobfromthecomfortofhome.com
-  skip-cert-verify: true
-  sni: blog.indyourperfectremotetechjobfromthecomfortofhome.com
-  tls: true
-  type: trojan
-  udp: true
 - cipher: aes-256-gcm
-  name: 🇮🇹 IT 002 | ⬇️ 1.32MB/s
+  name: 🇮🇹 IT 001 | ⬇️ 1.18MB/s
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 202.50.253.72
+  server: 202.50.253.81
+  skip-cert-verify: true
+  tls: false
   type: ss
-- name: 🇪🇸 ES 001 | ⬇️ 1.21MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 66.163.118.166
-  servername: learn.discovergreatjobsandadvanceyourcareer.com
-  skip-cert-verify: true
-  sni: learn.discovergreatjobsandadvanceyourcareer.com
-  tls: true
-  type: trojan
   udp: true
-- name: 🇪🇸 ES 002 | ⬇️ 1.21MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 66.163.118.40
-  servername: cdn.discovergreatjobsandadvanceyourcareer.com
+- name: 🇦🇪 AE 003 | ⬇️ 1.04MB/s
+  password: 900c8c92-1979-4c7c-8f2f-63e87d53d8fe
+  port: 13337
+  ports: 13337
+  server: uk-tube-01.stre4m.net
   skip-cert-verify: true
-  sni: cdn.discovergreatjobsandadvanceyourcareer.com
-  tls: true
-  type: trojan
-  udp: true
-- name: 🇨🇭 CH 001 | ⬇️ 1.20MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 208.69.78.29
-  servername: learn.yourultimateprofessionalcareerhub.com
-  skip-cert-verify: true
-  sni: learn.yourultimateprofessionalcareerhub.com
-  tls: true
-  type: trojan
-  udp: true
-- name: 🇨🇭 CH 002 | ⬇️ 1.19MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 208.69.78.208
-  servername: resources.yourultimateprofessionalcareerhub.com
-  skip-cert-verify: true
-  sni: resources.yourultimateprofessionalcareerhub.com
-  tls: true
-  type: trojan
-  udp: true
-- name: 🇪🇸 ES 003 | ⬇️ 1.16MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 66.163.118.62
-  servername: courses.discovergreatjobsandadvanceyourcareer.com
-  skip-cert-verify: true
-  sni: courses.discovergreatjobsandadvanceyourcareer.com
-  tls: true
-  type: trojan
-  udp: true
-- name: 🇪🇸 ES 004 | ⬇️ 1.16MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 66.163.118.203
-  servername: blog.discovergreatjobsandadvanceyourcareer.com
-  skip-cert-verify: true
-  sni: blog.discovergreatjobsandadvanceyourcareer.com
-  tls: true
-  type: trojan
-  udp: true
-- name: 🇩🇪 DE 002 | ⬇️ 1.16MB/s
-  port: 8443
-  server: 130.17.13.234
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: 🇨🇭 CH 003 | ⬇️ 1.15MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 208.69.78.33
-  servername: courses.yourultimateprofessionalcareerhub.com
-  skip-cert-verify: true
-  sni: courses.yourultimateprofessionalcareerhub.com
-  tls: true
-  type: trojan
-  udp: true
-- name: 🇨🇭 CH 004 | ⬇️ 1.14MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 208.69.78.158
-  servername: api.yourultimateprofessionalcareerhub.com
-  skip-cert-verify: true
-  sni: api.yourultimateprofessionalcareerhub.com
-  tls: true
-  type: trojan
-  udp: true
-- name: 🇬🇧 GB 004 | ⬇️ 1.13MB/s
-  network: ws
-  port: 443
-  server: uk1.connectsuite.org
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: fda89998-7e9a-4494-857a-cd0d00661b58
-  ws-opts:
-    path: /cdn-cgi/ws
-- name: 🇪🇸 ES 005 | ⬇️ 1.12MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 66.163.118.251
-  servername: resources.discovergreatjobsandadvanceyourcareer.com
-  skip-cert-verify: true
-  sni: resources.discovergreatjobsandadvanceyourcareer.com
-  tls: true
-  type: trojan
-  udp: true
-- name: 🇩🇪 DE 003 | ⬇️ 1.10MB/s
-  password: 'null'
-  port: 9002
-  server: 158.173.154.4
-  skip-cert-verify: true
-  tls: true
-  type: http
-  username: 'null'
-- name: 🇪🇸 ES 006 | ⬇️ 1.08MB/s
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 66.163.118.244
-  servername: api.discovergreatjobsandadvanceyourcareer.com
-  skip-cert-verify: true
-  sni: api.discovergreatjobsandadvanceyourcareer.com
-  tls: true
-  type: trojan
-  udp: true
-- name: 🇩🇪 DE 004 | ⬇️ 1.08MB/s
-  password: 'null'
-  port: 443
-  server: 193.233.75.115
-  skip-cert-verify: true
-  tls: true
-  type: http
-  username: 'null'
-- name: 🇨🇿 CZ 001 | ⬇️ 1.05MB/s
-  port: 9443
-  server: 152.233.16.174
-  skip-cert-verify: true
-  tls: true
-  type: http
+  sni: mother-earth.fyi
+  type: hysteria2
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
   - AUTO
-  - 🇺🇸 US 001 | ⬇️ 8.55MB/s
-  - 🇺🇸 US 002 | ⬇️ 6.14MB/s
-  - 🇺🇸 US 003 | ⬇️ 5.30MB/s
-  - 🇺🇸 US 004 | ⬇️ 5.09MB/s
-  - 🇺🇸 US 005 | ⬇️ 4.72MB/s
-  - 🇺🇸 US 006 | ⬇️ 4.65MB/s
-  - 🇺🇸 US 007 | ⬇️ 4.62MB/s
-  - 🇺🇸 US 008 | ⬇️ 4.60MB/s
-  - 🇺🇸 US 009 | ⬇️ 4.54MB/s
-  - 🇺🇸 US 010 | ⬇️ 4.46MB/s
-  - 🇺🇸 US 011 | ⬇️ 4.44MB/s
-  - 🇺🇸 US 012 | ⬇️ 4.43MB/s
-  - 🇺🇸 US 013 | ⬇️ 4.27MB/s
-  - 🇨🇦 CA 001 | ⬇️ 3.90MB/s
-  - 🇺🇸 US 014 | ⬇️ 3.87MB/s
-  - 🇨🇦 CA 002 | ⬇️ 3.87MB/s
-  - 🇨🇦 CA 003 | ⬇️ 3.80MB/s
-  - 🇺🇸 US 015 | ⬇️ 3.72MB/s
-  - 🇺🇸 US 016 | ⬇️ 3.71MB/s
-  - 🇨🇦 CA 004 | ⬇️ 3.71MB/s
-  - 🇨🇦 CA 005 | ⬇️ 3.69MB/s
-  - 🇨🇦 CA 006 | ⬇️ 3.67MB/s
-  - 🇺🇸 US 017 | ⬇️ 3.63MB/s
-  - 🇨🇦 CA 007 | ⬇️ 3.62MB/s
-  - 🇨🇦 CA 008 | ⬇️ 3.55MB/s
-  - 🇺🇸 US 018 | ⬇️ 3.36MB/s
-  - 🇺🇸 US 019 | ⬇️ 3.32MB/s
-  - 🇺🇸 US 020 | ⬇️ 3.30MB/s
-  - 🇺🇸 US 021 | ⬇️ 3.30MB/s
-  - 🇺🇸 US 022 | ⬇️ 3.27MB/s
-  - 🇺🇸 US 023 | ⬇️ 3.27MB/s
-  - 🇨🇦 CA 009 | ⬇️ 3.26MB/s
-  - 🇺🇸 US 024 | ⬇️ 3.23MB/s
-  - 🇺🇸 US 025 | ⬇️ 3.21MB/s
-  - 🇺🇸 US 026 | ⬇️ 3.20MB/s
-  - 🇺🇸 US 027 | ⬇️ 3.17MB/s
-  - 🇨🇦 CA 010 | ⬇️ 3.03MB/s
-  - 🇺🇸 US 028 | ⬇️ 2.99MB/s
-  - 🇺🇸 US 029 | ⬇️ 2.92MB/s
-  - 🇺🇸 US 030 | ⬇️ 2.89MB/s
-  - 🇺🇸 US 031 | ⬇️ 2.85MB/s
-  - 🇺🇸 US 032 | ⬇️ 2.44MB/s
-  - 🇺🇸 US 033 | ⬇️ 2.44MB/s
-  - 🇺🇸 US 034 | ⬇️ 2.34MB/s
-  - 🇺🇸 US 035 | ⬇️ 2.34MB/s
-  - 🇺🇸 US 036 | ⬇️ 2.33MB/s
-  - 🇺🇸 US 037 | ⬇️ 2.31MB/s
-  - 🇺🇸 US 038 | ⬇️ 2.31MB/s
-  - 🇺🇸 US 039 | ⬇️ 2.28MB/s
-  - 🇺🇸 US 040 | ⬇️ 2.26MB/s
-  - 🇨🇦 CA 011 | ⬇️ 2.14MB/s
-  - 🇺🇸 US 041 | ⬇️ 2.10MB/s
-  - 🇺🇸 US 042 | ⬇️ 2.04MB/s
-  - 🇬🇧 GB 001 | ⬇️ 1.86MB/s
-  - 🇬🇧 GB 002 | ⬇️ 1.72MB/s
-  - 🇬🇧 GB 003 | ⬇️ 1.71MB/s
-  - 🇳🇱 NL 001 | ⬇️ 1.57MB/s
-  - 🇳🇱 NL 002 | ⬇️ 1.57MB/s
-  - 🇳🇱 NL 003 | ⬇️ 1.57MB/s
-  - 🇳🇱 NL 004 | ⬇️ 1.57MB/s
-  - 🇳🇱 NL 005 | ⬇️ 1.56MB/s
-  - 🇳🇱 NL 006 | ⬇️ 1.56MB/s
-  - 🇩🇪 DE 001 | ⬇️ 1.49MB/s
-  - 🇦🇪 AE 001 | ⬇️ 1.43MB/s
-  - 🇮🇹 IT 001 | ⬇️ 1.36MB/s
-  - 🇳🇱 NL 007 | ⬇️ 1.36MB/s
-  - 🇳🇱 NL 008 | ⬇️ 1.33MB/s
-  - 🇮🇹 IT 002 | ⬇️ 1.32MB/s
-  - 🇪🇸 ES 001 | ⬇️ 1.21MB/s
-  - 🇪🇸 ES 002 | ⬇️ 1.21MB/s
-  - 🇨🇭 CH 001 | ⬇️ 1.20MB/s
-  - 🇨🇭 CH 002 | ⬇️ 1.19MB/s
-  - 🇪🇸 ES 003 | ⬇️ 1.16MB/s
-  - 🇪🇸 ES 004 | ⬇️ 1.16MB/s
-  - 🇩🇪 DE 002 | ⬇️ 1.16MB/s
-  - 🇨🇭 CH 003 | ⬇️ 1.15MB/s
-  - 🇨🇭 CH 004 | ⬇️ 1.14MB/s
-  - 🇬🇧 GB 004 | ⬇️ 1.13MB/s
-  - 🇪🇸 ES 005 | ⬇️ 1.12MB/s
-  - 🇩🇪 DE 003 | ⬇️ 1.10MB/s
-  - 🇪🇸 ES 006 | ⬇️ 1.08MB/s
-  - 🇩🇪 DE 004 | ⬇️ 1.08MB/s
-  - 🇨🇿 CZ 001 | ⬇️ 1.05MB/s
+  - 🇺🇸 US 001 | ⬇️ 7.21MB/s
+  - 🇺🇸 US 002 | ⬇️ 5.76MB/s
+  - 🇺🇸 US 003 | ⬇️ 3.20MB/s
+  - 🇺🇸 US 004 | ⬇️ 3.15MB/s
+  - 🇺🇸 US 005 | ⬇️ 3.02MB/s
+  - 🇺🇸 US 006 | ⬇️ 3.01MB/s
+  - 🇺🇸 US 007 | ⬇️ 1.44MB/s
+  - 🇦🇪 AE 001 | ⬇️ 1.38MB/s
+  - 🇦🇪 AE 002 | ⬇️ 1.32MB/s
+  - 🇯🇵 JP 001 | ⬇️ 1.30MB/s
+  - 🇮🇹 IT 001 | ⬇️ 1.18MB/s
+  - 🇦🇪 AE 003 | ⬇️ 1.04MB/s
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
   proxies:
-  - 🇺🇸 US 001 | ⬇️ 8.55MB/s
-  - 🇺🇸 US 002 | ⬇️ 6.14MB/s
-  - 🇺🇸 US 003 | ⬇️ 5.30MB/s
-  - 🇺🇸 US 004 | ⬇️ 5.09MB/s
-  - 🇺🇸 US 005 | ⬇️ 4.72MB/s
-  - 🇺🇸 US 006 | ⬇️ 4.65MB/s
-  - 🇺🇸 US 007 | ⬇️ 4.62MB/s
-  - 🇺🇸 US 008 | ⬇️ 4.60MB/s
-  - 🇺🇸 US 009 | ⬇️ 4.54MB/s
-  - 🇺🇸 US 010 | ⬇️ 4.46MB/s
-  - 🇺🇸 US 011 | ⬇️ 4.44MB/s
-  - 🇺🇸 US 012 | ⬇️ 4.43MB/s
-  - 🇺🇸 US 013 | ⬇️ 4.27MB/s
-  - 🇨🇦 CA 001 | ⬇️ 3.90MB/s
-  - 🇺🇸 US 014 | ⬇️ 3.87MB/s
-  - 🇨🇦 CA 002 | ⬇️ 3.87MB/s
-  - 🇨🇦 CA 003 | ⬇️ 3.80MB/s
-  - 🇺🇸 US 015 | ⬇️ 3.72MB/s
-  - 🇺🇸 US 016 | ⬇️ 3.71MB/s
-  - 🇨🇦 CA 004 | ⬇️ 3.71MB/s
-  - 🇨🇦 CA 005 | ⬇️ 3.69MB/s
-  - 🇨🇦 CA 006 | ⬇️ 3.67MB/s
-  - 🇺🇸 US 017 | ⬇️ 3.63MB/s
-  - 🇨🇦 CA 007 | ⬇️ 3.62MB/s
-  - 🇨🇦 CA 008 | ⬇️ 3.55MB/s
-  - 🇺🇸 US 018 | ⬇️ 3.36MB/s
-  - 🇺🇸 US 019 | ⬇️ 3.32MB/s
-  - 🇺🇸 US 020 | ⬇️ 3.30MB/s
-  - 🇺🇸 US 021 | ⬇️ 3.30MB/s
-  - 🇺🇸 US 022 | ⬇️ 3.27MB/s
-  - 🇺🇸 US 023 | ⬇️ 3.27MB/s
-  - 🇨🇦 CA 009 | ⬇️ 3.26MB/s
-  - 🇺🇸 US 024 | ⬇️ 3.23MB/s
-  - 🇺🇸 US 025 | ⬇️ 3.21MB/s
-  - 🇺🇸 US 026 | ⬇️ 3.20MB/s
-  - 🇺🇸 US 027 | ⬇️ 3.17MB/s
-  - 🇨🇦 CA 010 | ⬇️ 3.03MB/s
-  - 🇺🇸 US 028 | ⬇️ 2.99MB/s
-  - 🇺🇸 US 029 | ⬇️ 2.92MB/s
-  - 🇺🇸 US 030 | ⬇️ 2.89MB/s
-  - 🇺🇸 US 031 | ⬇️ 2.85MB/s
-  - 🇺🇸 US 032 | ⬇️ 2.44MB/s
-  - 🇺🇸 US 033 | ⬇️ 2.44MB/s
-  - 🇺🇸 US 034 | ⬇️ 2.34MB/s
-  - 🇺🇸 US 035 | ⬇️ 2.34MB/s
-  - 🇺🇸 US 036 | ⬇️ 2.33MB/s
-  - 🇺🇸 US 037 | ⬇️ 2.31MB/s
-  - 🇺🇸 US 038 | ⬇️ 2.31MB/s
-  - 🇺🇸 US 039 | ⬇️ 2.28MB/s
-  - 🇺🇸 US 040 | ⬇️ 2.26MB/s
-  - 🇨🇦 CA 011 | ⬇️ 2.14MB/s
-  - 🇺🇸 US 041 | ⬇️ 2.10MB/s
-  - 🇺🇸 US 042 | ⬇️ 2.04MB/s
-  - 🇬🇧 GB 001 | ⬇️ 1.86MB/s
-  - 🇬🇧 GB 002 | ⬇️ 1.72MB/s
-  - 🇬🇧 GB 003 | ⬇️ 1.71MB/s
-  - 🇳🇱 NL 001 | ⬇️ 1.57MB/s
-  - 🇳🇱 NL 002 | ⬇️ 1.57MB/s
-  - 🇳🇱 NL 003 | ⬇️ 1.57MB/s
-  - 🇳🇱 NL 004 | ⬇️ 1.57MB/s
-  - 🇳🇱 NL 005 | ⬇️ 1.56MB/s
-  - 🇳🇱 NL 006 | ⬇️ 1.56MB/s
-  - 🇩🇪 DE 001 | ⬇️ 1.49MB/s
-  - 🇦🇪 AE 001 | ⬇️ 1.43MB/s
-  - 🇮🇹 IT 001 | ⬇️ 1.36MB/s
-  - 🇳🇱 NL 007 | ⬇️ 1.36MB/s
-  - 🇳🇱 NL 008 | ⬇️ 1.33MB/s
-  - 🇮🇹 IT 002 | ⬇️ 1.32MB/s
-  - 🇪🇸 ES 001 | ⬇️ 1.21MB/s
-  - 🇪🇸 ES 002 | ⬇️ 1.21MB/s
-  - 🇨🇭 CH 001 | ⬇️ 1.20MB/s
-  - 🇨🇭 CH 002 | ⬇️ 1.19MB/s
-  - 🇪🇸 ES 003 | ⬇️ 1.16MB/s
-  - 🇪🇸 ES 004 | ⬇️ 1.16MB/s
-  - 🇩🇪 DE 002 | ⬇️ 1.16MB/s
-  - 🇨🇭 CH 003 | ⬇️ 1.15MB/s
-  - 🇨🇭 CH 004 | ⬇️ 1.14MB/s
-  - 🇬🇧 GB 004 | ⬇️ 1.13MB/s
-  - 🇪🇸 ES 005 | ⬇️ 1.12MB/s
-  - 🇩🇪 DE 003 | ⬇️ 1.10MB/s
-  - 🇪🇸 ES 006 | ⬇️ 1.08MB/s
-  - 🇩🇪 DE 004 | ⬇️ 1.08MB/s
-  - 🇨🇿 CZ 001 | ⬇️ 1.05MB/s
+  - 🇺🇸 US 001 | ⬇️ 7.21MB/s
+  - 🇺🇸 US 002 | ⬇️ 5.76MB/s
+  - 🇺🇸 US 003 | ⬇️ 3.20MB/s
+  - 🇺🇸 US 004 | ⬇️ 3.15MB/s
+  - 🇺🇸 US 005 | ⬇️ 3.02MB/s
+  - 🇺🇸 US 006 | ⬇️ 3.01MB/s
+  - 🇺🇸 US 007 | ⬇️ 1.44MB/s
+  - 🇦🇪 AE 001 | ⬇️ 1.38MB/s
+  - 🇦🇪 AE 002 | ⬇️ 1.32MB/s
+  - 🇯🇵 JP 001 | ⬇️ 1.30MB/s
+  - 🇮🇹 IT 001 | ⬇️ 1.18MB/s
+  - 🇦🇪 AE 003 | ⬇️ 1.04MB/s
 rules:
 - MATCH,PROXY
