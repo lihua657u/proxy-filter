@@ -3,98 +3,80 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
+- name: 🇺🇸 US 001 | ⬇️ 4.95MB/s
+  port: 9443
+  server: 23.161.192.49
+  skip-cert-verify: true
+  tls: true
+  type: http
+- name: 🇺🇸 US 002 | ⬇️ 2.75MB/s
+  password: 'null'
+  port: 9002
+  server: 138.199.35.195
+  skip-cert-verify: true
+  tls: true
+  type: http
+  username: 'null'
 - client-fingerprint: chrome
-  name: 🇺🇸 US 001 | ⬇️ 1.76MB/s
-  network: ws
+  name: 🇺🇸 US 003 | ⬇️ 2.71MB/s
   port: 8443
-  server: 179.255.137.204
-  servername: senflarelink-node-xfcyh2.pages.dev
+  reality-opts:
+    public-key: 4g6gX0ueJap7pY_iTDx23h6bzo3KIOTcFzP1Uacn0QA
+    short-id: 4ad2e4e660550e43
+  server: 156.229.167.109
+  servername: github.githubassets.com
   skip-cert-verify: true
-  sni: senflarelink-node-xfcyh2.pages.dev
+  sni: github.githubassets.com
   tls: true
   type: vless
   udp: true
-  uuid: b69cf773-da16-486e-afce-a45b94f998b3
-  ws-opts:
-    headers:
-      Host: senflarelink-node-xfcyh2.pages.dev
-    path: /
-- name: 🇦🇪 AE 001 | ⬇️ 1.62MB/s
-  password: 900c8c92-1979-4c7c-8f2f-63e87d53d8fe
-  port: 13337
-  ports: 13337
-  server: uk-tube-01.stre4m.net
+  uuid: eb8c97f7-a154-4442-91b0-54c0d055ad0b
+- name: 🇺🇸 US 004 | ⬇️ 2.68MB/s
+  password: 'null'
+  port: 9002
+  server: 138.199.35.207
   skip-cert-verify: true
-  sni: mother-earth.fyi
-  type: hysteria2
-- cipher: aes-256-gcm
-  name: 🇮🇹 IT 001 | ⬇️ 1.56MB/s
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 202.50.253.36
+  tls: true
+  type: http
+  username: 'null'
+- name: 🇨🇦 CA 001 | ⬇️ 2.00MB/s
+  port: 9443
+  server: 198.44.142.27
   skip-cert-verify: true
-  tls: false
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: 🇮🇹 IT 002 | ⬇️ 1.56MB/s
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 202.50.253.72
-  skip-cert-verify: true
-  tls: false
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: 🇮🇹 IT 003 | ⬇️ 1.56MB/s
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 202.50.253.63
-  skip-cert-verify: true
-  tls: false
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: 🇮🇹 IT 004 | ⬇️ 1.55MB/s
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 202.50.253.45
-  type: ss
-- cipher: aes-256-gcm
-  name: 🇮🇹 IT 005 | ⬇️ 1.54MB/s
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 202.50.253.18
-  skip-cert-verify: true
-  tls: false
-  type: ss
-  udp: true
-- name: 🇺🇸 US 002 | ⬇️ 1.54MB/s
-  network: ws
+  tls: true
+  type: http
+- alpn:
+  - h2
+  client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: 2e7d5cf6a7e50c564bfddf62c87e02e1
+  name: 🇳🇱 NL 001 | ⬇️ 1.84MB/s
+  network: grpc
   port: 443
-  server: xray-b8ct4r2f-sahdon-hosaindoost.cloady.io
-  servername: xray-b8ct4r2f-sahdon-hosaindoost.cloady.io
+  server: 98.98.132.110
+  servername: a1116.afl7t8f.com
   skip-cert-verify: true
-  sni: xray-b8ct4r2f-sahdon-hosaindoost.cloady.io
+  sni: a1116.afl7t8f.com
   tls: true
   type: vless
   udp: true
-  uuid: 1fd2e2d1-96f5-2056-19fd-b375b1a9d851
-  ws-opts:
-    headers:
-      Host: xray-b8ct4r2f-sahdon-hosaindoost.cloady.io
-    path: /ffad70ffdfc3bcda
-- cipher: aes-256-gcm
-  name: 🇮🇹 IT 006 | ⬇️ 1.53MB/s
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 202.50.253.54
+  uuid: e2f43a75-e683-4d09-96e8-3ad1f2e57100
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: 50a5f706c8ea4433838a207d435fbf031b008a9a
+  name: 🇳🇱 NL 002 | ⬇️ 1.82MB/s
+  network: grpc
+  port: 443
+  server: 51.194.118.38
+  servername: a1259.ve8nzuk.com
   skip-cert-verify: true
-  tls: false
-  type: ss
+  sni: a1259.ve8nzuk.com
+  tls: true
+  type: vless
   udp: true
+  uuid: 7ff1e7e1-2b5a-4e53-ae77-1516f9eb7754
 - cipher: aes-256-gcm
-  name: 🇮🇹 IT 007 | ⬇️ 1.53MB/s
+  name: 🇮🇹 IT 001 | ⬇️ 1.55MB/s
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 202.50.253.27
@@ -103,7 +85,49 @@ proxies:
   type: ss
   udp: true
 - cipher: aes-256-gcm
-  name: 🇮🇹 IT 008 | ⬇️ 1.52MB/s
+  name: 🇮🇹 IT 002 | ⬇️ 1.54MB/s
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 202.50.253.90
+  skip-cert-verify: true
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 🇮🇹 IT 003 | ⬇️ 1.54MB/s
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 202.50.253.36
+  type: ss
+- cipher: aes-256-gcm
+  name: 🇮🇹 IT 004 | ⬇️ 1.52MB/s
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 202.50.253.81
+  skip-cert-verify: true
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 🇮🇹 IT 005 | ⬇️ 1.52MB/s
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 202.50.253.18
+  skip-cert-verify: true
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 🇮🇹 IT 006 | ⬇️ 1.52MB/s
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 202.50.253.72
+  skip-cert-verify: true
+  tls: false
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 🇮🇹 IT 007 | ⬇️ 1.52MB/s
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 202.50.253.99
@@ -112,16 +136,54 @@ proxies:
   type: ss
   udp: true
 - cipher: aes-256-gcm
-  name: 🇮🇹 IT 009 | ⬇️ 1.41MB/s
+  name: 🇮🇹 IT 008 | ⬇️ 1.52MB/s
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 202.50.253.81
+  server: 202.50.253.45
+  skip-cert-verify: true
+  tls: false
   type: ss
-- name: 🇦🇪 AE 002 | ⬇️ 1.26MB/s
+  udp: true
+- cipher: aes-256-gcm
+  name: 🇮🇹 IT 009 | ⬇️ 1.52MB/s
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 202.50.253.54
+  type: ss
+- cipher: aes-256-gcm
+  name: 🇮🇹 IT 010 | ⬇️ 1.48MB/s
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 202.50.253.63
+  skip-cert-verify: true
+  tls: false
+  type: ss
+  udp: true
+- name: 🇳🇱 NL 003 | ⬇️ 1.33MB/s
+  password: 'null'
+  port: 9002
+  server: 84.17.47.148
+  skip-cert-verify: true
+  tls: true
+  type: http
+  username: 'null'
+- name: 🇩🇪 DE 001 | ⬇️ 1.23MB/s
+  port: 8443
+  server: 130.17.13.234
+  skip-cert-verify: true
+  tls: true
+  type: http
+- name: 🇩🇪 DE 002 | ⬇️ 1.07MB/s
+  port: 443
+  server: 87.106.223.158
+  skip-cert-verify: true
+  tls: true
+  type: http
+- name: 🇦🇪 AE 001 | ⬇️ 1.00MB/s
   password: 900c8c92-1979-4c7c-8f2f-63e87d53d8fe
   port: 13337
   ports: 13337
-  server: 128.254.186.190
+  server: uk-tube-01.stre4m.net
   skip-cert-verify: true
   sni: mother-earth.fyi
   type: hysteria2
@@ -130,37 +192,53 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇺🇸 US 001 | ⬇️ 1.76MB/s
-  - 🇦🇪 AE 001 | ⬇️ 1.62MB/s
-  - 🇮🇹 IT 001 | ⬇️ 1.56MB/s
-  - 🇮🇹 IT 002 | ⬇️ 1.56MB/s
-  - 🇮🇹 IT 003 | ⬇️ 1.56MB/s
-  - 🇮🇹 IT 004 | ⬇️ 1.55MB/s
-  - 🇮🇹 IT 005 | ⬇️ 1.54MB/s
-  - 🇺🇸 US 002 | ⬇️ 1.54MB/s
-  - 🇮🇹 IT 006 | ⬇️ 1.53MB/s
-  - 🇮🇹 IT 007 | ⬇️ 1.53MB/s
+  - 🇺🇸 US 001 | ⬇️ 4.95MB/s
+  - 🇺🇸 US 002 | ⬇️ 2.75MB/s
+  - 🇺🇸 US 003 | ⬇️ 2.71MB/s
+  - 🇺🇸 US 004 | ⬇️ 2.68MB/s
+  - 🇨🇦 CA 001 | ⬇️ 2.00MB/s
+  - 🇳🇱 NL 001 | ⬇️ 1.84MB/s
+  - 🇳🇱 NL 002 | ⬇️ 1.82MB/s
+  - 🇮🇹 IT 001 | ⬇️ 1.55MB/s
+  - 🇮🇹 IT 002 | ⬇️ 1.54MB/s
+  - 🇮🇹 IT 003 | ⬇️ 1.54MB/s
+  - 🇮🇹 IT 004 | ⬇️ 1.52MB/s
+  - 🇮🇹 IT 005 | ⬇️ 1.52MB/s
+  - 🇮🇹 IT 006 | ⬇️ 1.52MB/s
+  - 🇮🇹 IT 007 | ⬇️ 1.52MB/s
   - 🇮🇹 IT 008 | ⬇️ 1.52MB/s
-  - 🇮🇹 IT 009 | ⬇️ 1.41MB/s
-  - 🇦🇪 AE 002 | ⬇️ 1.26MB/s
+  - 🇮🇹 IT 009 | ⬇️ 1.52MB/s
+  - 🇮🇹 IT 010 | ⬇️ 1.48MB/s
+  - 🇳🇱 NL 003 | ⬇️ 1.33MB/s
+  - 🇩🇪 DE 001 | ⬇️ 1.23MB/s
+  - 🇩🇪 DE 002 | ⬇️ 1.07MB/s
+  - 🇦🇪 AE 001 | ⬇️ 1.00MB/s
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
   proxies:
-  - 🇺🇸 US 001 | ⬇️ 1.76MB/s
-  - 🇦🇪 AE 001 | ⬇️ 1.62MB/s
-  - 🇮🇹 IT 001 | ⬇️ 1.56MB/s
-  - 🇮🇹 IT 002 | ⬇️ 1.56MB/s
-  - 🇮🇹 IT 003 | ⬇️ 1.56MB/s
-  - 🇮🇹 IT 004 | ⬇️ 1.55MB/s
-  - 🇮🇹 IT 005 | ⬇️ 1.54MB/s
-  - 🇺🇸 US 002 | ⬇️ 1.54MB/s
-  - 🇮🇹 IT 006 | ⬇️ 1.53MB/s
-  - 🇮🇹 IT 007 | ⬇️ 1.53MB/s
+  - 🇺🇸 US 001 | ⬇️ 4.95MB/s
+  - 🇺🇸 US 002 | ⬇️ 2.75MB/s
+  - 🇺🇸 US 003 | ⬇️ 2.71MB/s
+  - 🇺🇸 US 004 | ⬇️ 2.68MB/s
+  - 🇨🇦 CA 001 | ⬇️ 2.00MB/s
+  - 🇳🇱 NL 001 | ⬇️ 1.84MB/s
+  - 🇳🇱 NL 002 | ⬇️ 1.82MB/s
+  - 🇮🇹 IT 001 | ⬇️ 1.55MB/s
+  - 🇮🇹 IT 002 | ⬇️ 1.54MB/s
+  - 🇮🇹 IT 003 | ⬇️ 1.54MB/s
+  - 🇮🇹 IT 004 | ⬇️ 1.52MB/s
+  - 🇮🇹 IT 005 | ⬇️ 1.52MB/s
+  - 🇮🇹 IT 006 | ⬇️ 1.52MB/s
+  - 🇮🇹 IT 007 | ⬇️ 1.52MB/s
   - 🇮🇹 IT 008 | ⬇️ 1.52MB/s
-  - 🇮🇹 IT 009 | ⬇️ 1.41MB/s
-  - 🇦🇪 AE 002 | ⬇️ 1.26MB/s
+  - 🇮🇹 IT 009 | ⬇️ 1.52MB/s
+  - 🇮🇹 IT 010 | ⬇️ 1.48MB/s
+  - 🇳🇱 NL 003 | ⬇️ 1.33MB/s
+  - 🇩🇪 DE 001 | ⬇️ 1.23MB/s
+  - 🇩🇪 DE 002 | ⬇️ 1.07MB/s
+  - 🇦🇪 AE 001 | ⬇️ 1.00MB/s
 rules:
 - MATCH,PROXY
