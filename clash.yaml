@@ -3,22 +3,104 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇺🇸 US 001 | ⬇️ 4.95MB/s
-  port: 9443
-  server: 23.161.192.49
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: 🇺🇸 US 002 | ⬇️ 2.75MB/s
-  password: 'null'
-  port: 9002
-  server: 138.199.35.195
-  skip-cert-verify: true
-  tls: true
-  type: http
-  username: 'null'
 - client-fingerprint: chrome
-  name: 🇺🇸 US 003 | ⬇️ 2.71MB/s
+  name: 🇨🇦 CA 001 | ⬇️ 3.54MB/s
+  network: ws
+  port: 443
+  server: saas.sin.fan
+  servername: v2n6.11676767.xyz
+  skip-cert-verify: true
+  sni: v2n6.11676767.xyz
+  tls: true
+  type: vless
+  udp: true
+  uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
+  ws-opts:
+    headers:
+      Host: v2n6.11676767.xyz
+    path: /ranking/htm
+- client-fingerprint: chrome
+  name: 🇨🇦 CA 002 | ⬇️ 3.46MB/s
+  network: ws
+  port: 443
+  server: 172.66.0.172
+  servername: wallweb-4r0.pages.dev
+  skip-cert-verify: true
+  sni: wallweb-4r0.pages.dev
+  tls: true
+  type: vless
+  udp: true
+  uuid: e53eacb6-cd30-4964-a57c-febcb5151b98
+  ws-opts:
+    headers:
+      Host: wallweb-4r0.pages.dev
+    path: /
+- client-fingerprint: chrome
+  name: 🇳🇱 NL 001 | ⬇️ 3.45MB/s
+  network: ws
+  port: 8443
+  server: 188.164.248.123
+  servername: vp21.cc.cd
+  skip-cert-verify: true
+  sni: vp21.cc.cd
+  tls: true
+  type: vless
+  udp: true
+  uuid: 7b102311-43fd-4e8f-877e-8090623c101d
+  ws-opts:
+    headers:
+      Host: vp21.cc.cd
+    path: /
+- client-fingerprint: chrome
+  name: 🇳🇱 NL 002 | ⬇️ 3.37MB/s
+  network: ws
+  port: 2083
+  server: 188.164.248.48
+  servername: helloapps.cc.cd
+  skip-cert-verify: true
+  sni: helloapps.cc.cd
+  tls: true
+  type: vless
+  udp: true
+  uuid: a21b9103-1693-49c1-8dc9-e8e8098ee969
+  ws-opts:
+    headers:
+      Host: helloapps.cc.cd
+    path: /
+- client-fingerprint: chrome
+  name: 🇺🇸 US 001 | ⬇️ 3.23MB/s
+  network: ws
+  port: 443
+  server: xray-b8ct4r2f-sahdon-hosaindoost.cloady.io
+  servername: xray-b8ct4r2f-sahdon-hosaindoost.cloady.io
+  skip-cert-verify: true
+  sni: xray-b8ct4r2f-sahdon-hosaindoost.cloady.io
+  tls: true
+  type: vless
+  udp: true
+  uuid: 1fd2e2d1-96f5-2056-19fd-b375b1a9d851
+  ws-opts:
+    headers:
+      Host: xray-b8ct4r2f-sahdon-hosaindoost.cloady.io
+    path: /ffad70ffdfc3bcda
+- client-fingerprint: chrome
+  name: 🇨🇦 CA 003 | ⬇️ 3.13MB/s
+  network: ws
+  port: 2083
+  server: 172.66.0.230
+  servername: helloapps.cc.cd
+  skip-cert-verify: true
+  sni: helloapps.cc.cd
+  tls: true
+  type: vless
+  udp: true
+  uuid: a21b9103-1693-49c1-8dc9-e8e8098ee969
+  ws-opts:
+    headers:
+      Host: helloapps.cc.cd
+    path: /
+- client-fingerprint: chrome
+  name: 🇺🇸 US 002 | ⬇️ 2.66MB/s
   port: 8443
   reality-opts:
     public-key: 4g6gX0ueJap7pY_iTDx23h6bzo3KIOTcFzP1Uacn0QA
@@ -31,26 +113,30 @@ proxies:
   type: vless
   udp: true
   uuid: eb8c97f7-a154-4442-91b0-54c0d055ad0b
-- name: 🇺🇸 US 004 | ⬇️ 2.68MB/s
-  password: 'null'
+- name: 🇲🇽 MX 001 | ⬇️ 2.08MB/s
+  password: VvUAFi2E
+  port: 62000
+  server: 72.57.228.87
+  type: socks5
+  username: UBXich0K
+- name: 🇺🇸 US 003 | ⬇️ 2.06MB/s
   port: 9002
-  server: 138.199.35.207
+  server: 138.199.35.220
   skip-cert-verify: true
   tls: true
   type: http
-  username: 'null'
-- name: 🇨🇦 CA 001 | ⬇️ 2.00MB/s
-  port: 9443
-  server: 198.44.142.27
-  skip-cert-verify: true
-  tls: true
-  type: http
+- name: 🇲🇽 MX 002 | ⬇️ 1.81MB/s
+  password: sZnD8GTz
+  port: 42000
+  server: 144.225.47.25
+  type: socks5
+  username: DJy1T0dt
 - alpn:
   - h2
   client-fingerprint: chrome
   grpc-opts:
     grpc-service-name: 2e7d5cf6a7e50c564bfddf62c87e02e1
-  name: 🇳🇱 NL 001 | ⬇️ 1.84MB/s
+  name: 🇳🇱 NL 003 | ⬇️ 1.68MB/s
   network: grpc
   port: 443
   server: 98.98.132.110
@@ -64,7 +150,7 @@ proxies:
 - client-fingerprint: chrome
   grpc-opts:
     grpc-service-name: 50a5f706c8ea4433838a207d435fbf031b008a9a
-  name: 🇳🇱 NL 002 | ⬇️ 1.82MB/s
+  name: 🇳🇱 NL 004 | ⬇️ 1.64MB/s
   network: grpc
   port: 443
   server: 51.194.118.38
@@ -75,111 +161,27 @@ proxies:
   type: vless
   udp: true
   uuid: 7ff1e7e1-2b5a-4e53-ae77-1516f9eb7754
-- cipher: aes-256-gcm
-  name: 🇮🇹 IT 001 | ⬇️ 1.55MB/s
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 202.50.253.27
+- name: 🇺🇸 US 004 | ⬇️ 1.24MB/s
+  port: 443
+  server: 207.5.30.9
   skip-cert-verify: true
-  tls: false
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: 🇮🇹 IT 002 | ⬇️ 1.54MB/s
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 202.50.253.90
-  skip-cert-verify: true
-  tls: false
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: 🇮🇹 IT 003 | ⬇️ 1.54MB/s
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 202.50.253.36
-  type: ss
-- cipher: aes-256-gcm
-  name: 🇮🇹 IT 004 | ⬇️ 1.52MB/s
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 202.50.253.81
-  skip-cert-verify: true
-  tls: false
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: 🇮🇹 IT 005 | ⬇️ 1.52MB/s
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 202.50.253.18
-  skip-cert-verify: true
-  tls: false
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: 🇮🇹 IT 006 | ⬇️ 1.52MB/s
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 202.50.253.72
-  skip-cert-verify: true
-  tls: false
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: 🇮🇹 IT 007 | ⬇️ 1.52MB/s
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 202.50.253.99
-  skip-cert-verify: true
-  tls: false
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: 🇮🇹 IT 008 | ⬇️ 1.52MB/s
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 202.50.253.45
-  skip-cert-verify: true
-  tls: false
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: 🇮🇹 IT 009 | ⬇️ 1.52MB/s
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 202.50.253.54
-  type: ss
-- cipher: aes-256-gcm
-  name: 🇮🇹 IT 010 | ⬇️ 1.48MB/s
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 202.50.253.63
-  skip-cert-verify: true
-  tls: false
-  type: ss
-  udp: true
-- name: 🇳🇱 NL 003 | ⬇️ 1.33MB/s
+  tls: true
+  type: http
+- name: 🇳🇱 NL 005 | ⬇️ 1.22MB/s
   password: 'null'
   port: 9002
-  server: 84.17.47.148
+  server: 84.17.47.125
   skip-cert-verify: true
   tls: true
   type: http
   username: 'null'
-- name: 🇩🇪 DE 001 | ⬇️ 1.23MB/s
-  port: 8443
-  server: 130.17.13.234
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: 🇩🇪 DE 002 | ⬇️ 1.07MB/s
+- name: 🇧🇪 BE 001 | ⬇️ 1.21MB/s
   port: 443
-  server: 87.106.223.158
+  server: 146.70.123.98
   skip-cert-verify: true
   tls: true
   type: http
-- name: 🇦🇪 AE 001 | ⬇️ 1.00MB/s
+- name: 🇦🇪 AE 001 | ⬇️ 1.19MB/s
   password: 900c8c92-1979-4c7c-8f2f-63e87d53d8fe
   port: 13337
   ports: 13337
@@ -187,58 +189,124 @@ proxies:
   skip-cert-verify: true
   sni: mother-earth.fyi
   type: hysteria2
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇺🇸 US 005 | ⬇️ 1.16MB/s
+  port: 59539
+  reality-opts:
+    public-key: R6mPqCsjZMWauci4LHw7Qp1LGKmBd-sxMXplyOn9bSQ
+  server: 46.29.255.123
+  servername: cloudflare-dns.com
+  skip-cert-verify: true
+  sni: cloudflare-dns.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 30572b57-f5ab-4eb8-82d4-a24d399b99f6
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇯🇵 JP 001 | ⬇️ 1.13MB/s
+  port: 443
+  reality-opts:
+    public-key: dtNeCNIcRgs8_EKIJg_oTJEsiA8KBU-QaE1yVpkoX0I
+    short-id: 949ddd6bacbc
+  server: jpg1radio.jumpernode.site
+  servername: www.cdn.amazon.com
+  skip-cert-verify: true
+  sni: www.cdn.amazon.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: f45ccbaa-521d-4d3a-a4e7-13a3094f2b90
+- flow: xtls-rprx-vision
+  name: 🇫🇮 FI 001 | ⬇️ 1.13MB/s
+  port: 443
+  server: mail1.besttotaldns.com
+  servername: mail1.besttotaldns.com
+  skip-cert-verify: true
+  sni: mail1.besttotaldns.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: da14e323-6af7-406f-a5c2-1eb7975ada8b
+- name: 🇳🇱 NL 006 | ⬇️ 1.12MB/s
+  port: 9443
+  server: 149.36.51.157
+  skip-cert-verify: true
+  tls: true
+  type: http
+- name: 🇦🇪 AE 002 | ⬇️ 1.11MB/s
+  password: 900c8c92-1979-4c7c-8f2f-63e87d53d8fe
+  port: 13337
+  server: 128.254.186.57
+  servername: mother-earth.fyi
+  skip-cert-verify: true
+  sni: mother-earth.fyi
+  type: hysteria2
+  udp: true
+- name: 🇦🇪 AE 003 | ⬇️ 1.07MB/s
+  password: 900c8c92-1979-4c7c-8f2f-63e87d53d8fe
+  port: 13337
+  server: 128.254.186.190
+  servername: mother-earth.fyi
+  skip-cert-verify: true
+  sni: mother-earth.fyi
+  type: hysteria2
+  udp: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
   - AUTO
-  - 🇺🇸 US 001 | ⬇️ 4.95MB/s
-  - 🇺🇸 US 002 | ⬇️ 2.75MB/s
-  - 🇺🇸 US 003 | ⬇️ 2.71MB/s
-  - 🇺🇸 US 004 | ⬇️ 2.68MB/s
-  - 🇨🇦 CA 001 | ⬇️ 2.00MB/s
-  - 🇳🇱 NL 001 | ⬇️ 1.84MB/s
-  - 🇳🇱 NL 002 | ⬇️ 1.82MB/s
-  - 🇮🇹 IT 001 | ⬇️ 1.55MB/s
-  - 🇮🇹 IT 002 | ⬇️ 1.54MB/s
-  - 🇮🇹 IT 003 | ⬇️ 1.54MB/s
-  - 🇮🇹 IT 004 | ⬇️ 1.52MB/s
-  - 🇮🇹 IT 005 | ⬇️ 1.52MB/s
-  - 🇮🇹 IT 006 | ⬇️ 1.52MB/s
-  - 🇮🇹 IT 007 | ⬇️ 1.52MB/s
-  - 🇮🇹 IT 008 | ⬇️ 1.52MB/s
-  - 🇮🇹 IT 009 | ⬇️ 1.52MB/s
-  - 🇮🇹 IT 010 | ⬇️ 1.48MB/s
-  - 🇳🇱 NL 003 | ⬇️ 1.33MB/s
-  - 🇩🇪 DE 001 | ⬇️ 1.23MB/s
-  - 🇩🇪 DE 002 | ⬇️ 1.07MB/s
-  - 🇦🇪 AE 001 | ⬇️ 1.00MB/s
+  - 🇨🇦 CA 001 | ⬇️ 3.54MB/s
+  - 🇨🇦 CA 002 | ⬇️ 3.46MB/s
+  - 🇳🇱 NL 001 | ⬇️ 3.45MB/s
+  - 🇳🇱 NL 002 | ⬇️ 3.37MB/s
+  - 🇺🇸 US 001 | ⬇️ 3.23MB/s
+  - 🇨🇦 CA 003 | ⬇️ 3.13MB/s
+  - 🇺🇸 US 002 | ⬇️ 2.66MB/s
+  - 🇲🇽 MX 001 | ⬇️ 2.08MB/s
+  - 🇺🇸 US 003 | ⬇️ 2.06MB/s
+  - 🇲🇽 MX 002 | ⬇️ 1.81MB/s
+  - 🇳🇱 NL 003 | ⬇️ 1.68MB/s
+  - 🇳🇱 NL 004 | ⬇️ 1.64MB/s
+  - 🇺🇸 US 004 | ⬇️ 1.24MB/s
+  - 🇳🇱 NL 005 | ⬇️ 1.22MB/s
+  - 🇧🇪 BE 001 | ⬇️ 1.21MB/s
+  - 🇦🇪 AE 001 | ⬇️ 1.19MB/s
+  - 🇺🇸 US 005 | ⬇️ 1.16MB/s
+  - 🇯🇵 JP 001 | ⬇️ 1.13MB/s
+  - 🇫🇮 FI 001 | ⬇️ 1.13MB/s
+  - 🇳🇱 NL 006 | ⬇️ 1.12MB/s
+  - 🇦🇪 AE 002 | ⬇️ 1.11MB/s
+  - 🇦🇪 AE 003 | ⬇️ 1.07MB/s
 - name: AUTO
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
   proxies:
-  - 🇺🇸 US 001 | ⬇️ 4.95MB/s
-  - 🇺🇸 US 002 | ⬇️ 2.75MB/s
-  - 🇺🇸 US 003 | ⬇️ 2.71MB/s
-  - 🇺🇸 US 004 | ⬇️ 2.68MB/s
-  - 🇨🇦 CA 001 | ⬇️ 2.00MB/s
-  - 🇳🇱 NL 001 | ⬇️ 1.84MB/s
-  - 🇳🇱 NL 002 | ⬇️ 1.82MB/s
-  - 🇮🇹 IT 001 | ⬇️ 1.55MB/s
-  - 🇮🇹 IT 002 | ⬇️ 1.54MB/s
-  - 🇮🇹 IT 003 | ⬇️ 1.54MB/s
-  - 🇮🇹 IT 004 | ⬇️ 1.52MB/s
-  - 🇮🇹 IT 005 | ⬇️ 1.52MB/s
-  - 🇮🇹 IT 006 | ⬇️ 1.52MB/s
-  - 🇮🇹 IT 007 | ⬇️ 1.52MB/s
-  - 🇮🇹 IT 008 | ⬇️ 1.52MB/s
-  - 🇮🇹 IT 009 | ⬇️ 1.52MB/s
-  - 🇮🇹 IT 010 | ⬇️ 1.48MB/s
-  - 🇳🇱 NL 003 | ⬇️ 1.33MB/s
-  - 🇩🇪 DE 001 | ⬇️ 1.23MB/s
-  - 🇩🇪 DE 002 | ⬇️ 1.07MB/s
-  - 🇦🇪 AE 001 | ⬇️ 1.00MB/s
+  - 🇨🇦 CA 001 | ⬇️ 3.54MB/s
+  - 🇨🇦 CA 002 | ⬇️ 3.46MB/s
+  - 🇳🇱 NL 001 | ⬇️ 3.45MB/s
+  - 🇳🇱 NL 002 | ⬇️ 3.37MB/s
+  - 🇺🇸 US 001 | ⬇️ 3.23MB/s
+  - 🇨🇦 CA 003 | ⬇️ 3.13MB/s
+  - 🇺🇸 US 002 | ⬇️ 2.66MB/s
+  - 🇲🇽 MX 001 | ⬇️ 2.08MB/s
+  - 🇺🇸 US 003 | ⬇️ 2.06MB/s
+  - 🇲🇽 MX 002 | ⬇️ 1.81MB/s
+  - 🇳🇱 NL 003 | ⬇️ 1.68MB/s
+  - 🇳🇱 NL 004 | ⬇️ 1.64MB/s
+  - 🇺🇸 US 004 | ⬇️ 1.24MB/s
+  - 🇳🇱 NL 005 | ⬇️ 1.22MB/s
+  - 🇧🇪 BE 001 | ⬇️ 1.21MB/s
+  - 🇦🇪 AE 001 | ⬇️ 1.19MB/s
+  - 🇺🇸 US 005 | ⬇️ 1.16MB/s
+  - 🇯🇵 JP 001 | ⬇️ 1.13MB/s
+  - 🇫🇮 FI 001 | ⬇️ 1.13MB/s
+  - 🇳🇱 NL 006 | ⬇️ 1.12MB/s
+  - 🇦🇪 AE 002 | ⬇️ 1.11MB/s
+  - 🇦🇪 AE 003 | ⬇️ 1.07MB/s
 rules:
 - MATCH,PROXY
